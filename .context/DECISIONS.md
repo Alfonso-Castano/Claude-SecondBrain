@@ -28,6 +28,13 @@ A subagent lookup (claude-code-guide) reported that automemory is controlled by 
 **Next step:** Before or during Feature #1, use `update-config` to verify the actual disable mechanism and apply it scoped to this repo, then document the confirmed setting in `CLAUDE-WIKI.md`.
 **Made during:** Project initialization
 
+## 2026-07-15 — Pushback mechanism must present multiple debating perspectives, not one verdict
+
+**Decision:** When Feature #1 designs the "Claude pushes back with independently-researched knowledge" mechanism (ingestion pushback, experience-feedback reconciliation, or any propose-then-confirm interaction), it must surface competing framings/stances that debate each other — not a single confident, well-researched verdict for Alfonso to simply accept or reject.
+**Rationale:** Research run during initialization found that "I researched this independently" framing tends to *increase* human deference rather than provoke harder thinking (automation bias) — this would quietly undermine the project's core non-negotiable principle without the system ever technically breaking its own rules (see `.context/research/SUMMARY.md`, Pitfalls). Alfonso's review of that research identified a concrete, source-grounded countermeasure: the reference material's own guidance for using Claude as a thought partner is specifically to have Claude play devil's advocate and spin up multiple sub-agents/perspectives that actively debate each other, rather than deliver one synthesis. This is more concrete than the mitigation originally recorded in the research summary ("require Alfonso to articulate his own counter-reasoning") and supersedes it as the primary design requirement, not just one option among several.
+**Applies to:** Feature #1's `/feature-discuss` for the reconciliation/pushback mechanism specifically — this is now a requirement to design against, not an abstract risk to keep in mind.
+**Made during:** Context review, prior to Feature #1
+
 ## 2026-07-15 — Research-surfaced gaps deferred to Feature #1, not resolved here
 
 **Decision:** Concrete gaps found during domain research (page-level YAML frontmatter template, anti-`[[wikilink]]` rule, earned-not-mechanical `shared`/`claude-knowledge` pairing, a concrete lint checklist, stakes-differentiated propose-then-confirm, reconciliation requiring Alfonso's own counter-reasoning rather than accept/reject) are recorded in `.context/research/SUMMARY.md` for Feature #1's discuss/plan loop to pick up, not decided or written into `CLAUDE-WIKI.md` during this initialization.
