@@ -9,11 +9,12 @@ See: .context/research/SUMMARY.md
 
 ## Current Position
 
-Status: Initialized — ready to begin Feature #1 (the wiki structure and `CLAUDE-WIKI.md` schema)
-Last activity: 2026-07-15 — Project initialized via /init-project, including a full research pass (see `.context/research/`)
+Status: Feature #1 (Wiki Structure) complete — passed `/feature-verify` with a PASS verdict (one FAIL→fix→PASS cycle; the FAIL was an invalid `@import ABOUT-ME.md` syntax in `CLAUDE.md`, fixed in Task 007 to the correct `@ABOUT-ME.md`).
+
+Built on branch `feature/001-wiki-structure` (currently checked out, working tree clean, not yet merged into `main`): `raw/`, `wiki/shared/`, `wiki/claude-knowledge/`, `projects/` folders; `index.md` and `log.md` seeded empty; `CLAUDE-WIKI.md` — the full operating schema (frontmatter template, ingestion/query/lint workflows, new-page-vs-edit rule, earned-not-mechanical pairing, anti-wikilink rule, propose-then-confirm with the write-only-gating boundary, the devil's-advocate pushback design); `CLAUDE.md` as a thin router that correctly `@imports` `ABOUT-ME.md` and points to everything else as plain text; `ABOUT-ME.md` seeded as a single root-level file; markdown tooling (`markdownlint-cli2` + `markdown-link-check` as real devDependencies, `npm run lint:md`/`lint:links`/`lint` scripts, no git hook); and automemory disabled and verified scoped to this repo (`autoMemoryEnabled: false` in the repo-local, committed `.claude/settings.json`).
+
+Last activity: 2026-07-17 — `chore(001): record PASS review after fix` (commit `30325ef`), closing out Feature #1.
 
 ## Next Action
 
-Start Feature #1 through the full `/feature` → `/feature-discuss` → `/feature-plan` → `/feature-execute` → `/feature-verify` loop: build `raw/`, `wiki/` (`shared/` + `claude-knowledge/`), `index.md`, `log.md`, and `CLAUDE-WIKI.md`'s actual content. Read `.context/research/SUMMARY.md` and `.context/DECISIONS.md` first — they surface concrete gaps (frontmatter template, anti-wikilink rule, earned-not-mechanical pairing, a lint checklist) plus one confirmed design requirement: the reconciliation/pushback mechanism must present multiple debating perspectives (devil's-advocate framing), not a single authoritative verdict — the primary defense against the automation-bias risk the research surfaced. Fold these into this feature's scope rather than treating them as later add-ons.
-
-**Open item to resolve before or during Feature #1:** disable Claude Code's automemory for this repo (see `.context/DECISIONS.md`, 2026-07-15 entry) — required by `build-handoff.md`, mechanism not yet independently verified. Use the `update-config` skill to confirm and apply.
+Merge `feature/001-wiki-structure` into `main` (it's passed review and is ready), then start Feature #2 through `/feature-discuss`: re-ingest the two already-held sources — Hormozi's *$100M Offers* and a negotiation book — through the now-existing wiki workflow defined in `CLAUDE-WIKI.md`, per `OVERVIEW.md`'s Context section, which already names this as the planned next feature.

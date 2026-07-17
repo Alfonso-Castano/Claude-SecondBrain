@@ -2,6 +2,19 @@
 
 Running record of decisions that constrain future work. Newest first. Any future session or skill should check here before re-deciding something already settled.
 
+## 2026-07-17 — Automemory-disable mechanism: confirmed and applied (supersedes 2026-07-15 entry)
+
+**Decision:** Automemory is disabled for this repository via `autoMemoryEnabled: false` in the repo-local, committed `.claude/settings.json`. This is confirmed, not a lead: verified independently twice — once by Task 003 via the `update-config` skill (which found the key in Claude Code's own bundled settings schema, corroborating but independent of the earlier unverified subagent claim) and again during `/feature-verify`'s review pass (fetched Anthropic's live docs at `code.claude.com/docs/en/memory`, which state "set `autoMemoryEnabled` in your project settings"). Confirmed repo-scoped: `~/.claude/settings.json` (user level) contains no such key, so no other Claude Code project on this machine is affected.
+**Rationale:** Automemory writing without confirmation directly violates this project's propose-then-confirm principle; the setting needed a verified (not guessed) mechanism before being relied on, per this project's standing caution around unverified subagent leads.
+**Supersedes:** The 2026-07-15 "Automemory-disable mechanism: open item, needs verification" entry below — that entry's unverified lead is now confirmed correct and can be treated as resolved.
+**Made during:** Feature #1 (Task 003, corroborated by `/feature-verify`)
+
+## 2026-07-17 — Claude Code `@import` syntax confirmed: `@path`, no `import` keyword
+
+**Decision:** Claude Code's file-import syntax for `CLAUDE.md` (and similar files) is `@path/to/file` — the `@` is immediately followed by the path, with no `import` keyword and no space (e.g. `@README`, `@ABOUT-ME.md`). Writing `@import ABOUT-ME.md` is invalid: the parser reads `@import` as an attempt to import a nonexistent file literally named `import`, leaving the intended path as inert trailing text that never actually loads.
+**Rationale:** This exact mistake shipped in Feature #1's Task 006 (`CLAUDE.md` router) and was only caught by `/feature-verify`'s first pass (FAIL), fixed in Task 007, and independently re-confirmed against Anthropic's live docs (`code.claude.com/docs/en/memory`) in the re-review. Recording it here so future sessions writing or editing any `CLAUDE.md`-style import don't repeat it.
+**Made during:** Feature #1 (Task 007 fix, confirmed in `/feature-verify` re-review)
+
 ## 2026-07-17 — External second-brain review: corrections and additions to Feature #1
 
 **Context:** During `/feature-discuss` for Feature #1, Alfonso got an independent review from a separate Claude chat that had ingested several second-brain source documents not available to this project directly. That review confirmed most of the design (raw/wiki/log.md structure, the deep-ingestion no-confirm exception, index-first retrieval, and — most importantly — the devil's-advocate pushback design, which it called the strongest source-match in the whole design, independently corroborated by the source material's own sycophancy warning) but surfaced several real corrections/additions:
