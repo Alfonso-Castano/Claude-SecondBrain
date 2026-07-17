@@ -2,7 +2,7 @@
 
 This file is intentionally thin — router only, no operating rules inline. It loads into every session automatically.
 
-@import ABOUT-ME.md
+@ABOUT-ME.md
 
 ## Where things live
 

@@ -1,6 +1,6 @@
 # Task 007: Fix invalid @import syntax in CLAUDE.md
 
-**Status:** pending
+**Status:** done
 **Depends on:** none (fix against an already-existing file)
 **Model tier:** cheap — the fix is fully specified below; the executor's job is a one-line edit and verification.
 
@@ -40,3 +40,5 @@ cat CLAUDE.md
 Confirms: line 5 reads exactly `@ABOUT-ME.md` (no `import` keyword, no space between `@` and the path), and no other line changed.
 
 ## Evidence
+
+`CLAUDE.md` line 5 changed to exactly `@ABOUT-ME.md`, independently confirmed via direct read by the dispatching session — no `import` keyword, no space, no other line changed. Executor: haiku, DONE.
