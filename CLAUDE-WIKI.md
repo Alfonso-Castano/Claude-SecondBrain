@@ -151,11 +151,29 @@ Because that human review is waived per-page, the pass carries its own disciplin
    only for genuinely distinct entities.
 2. **Write each page** with complete, valid frontmatter (§2), including an honest trust
    tag and a `source` citation that points back to the ingested material.
+
+   **Preserve depth — do not compress for brevity.** Alfonso has stated this directly and
+   repeatedly: he wants a source's actual reasoning, nuance, caveats, and concrete examples
+   preserved in the wiki, not distilled down to a tidy summary of conclusions. This is a
+   personalization on top of the raw/wiki pattern, not something the pattern itself
+   prescribes — the pattern is silent on how much detail to keep, and the default instinct
+   under a workflow like this is to compress. Resist that instinct. If a source spends three
+   paragraphs building an argument with examples, the wiki page should show that argument
+   being built, not collapse it into a one-line conclusion. A page that is accurate but
+   flattened has still lost something real: this rule exists because that loss is easy to
+   commit without noticing, and correspondingly easy to leave unfixed unless it's checked
+   for explicitly (see point 4).
 3. **Apply pairing only where earned** (§3.2) — never mint stubs.
 4. **Self-verification (the pass's own closing step).** After the batch is written, Claude
    re-checks its own ingestion batch for accuracy before considering the pass complete:
    did each page faithfully represent the source, are the trust tags honest, do citations
-   resolve, did anything get garbled or over-claimed?
+   resolve, did anything get garbled or over-claimed — **and, as a distinct check, did
+   anything get flattened?** Faithfulness asks whether a claim is *true* to the source;
+   the depth check asks whether the source's reasoning, nuance, and examples actually
+   made it onto the page, or whether the page is a compressed summary that lost the
+   texture of the original. A page can pass the faithfulness check and still fail the
+   depth check — a technically-accurate one-sentence summary of a nuanced argument is
+   exactly this failure mode. Both checks are required; neither substitutes for the other.
 
    Self-verification is **separate from trust-tagging** and is not optional polish. A
    trust tag describes Claude's confidence in a *claim* (was this extracted, inferred, or
