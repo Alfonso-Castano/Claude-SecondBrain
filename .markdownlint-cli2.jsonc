@@ -1,0 +1,10 @@
+{
+  // Base ruleset, with two rules relaxed for prose wiki pages.
+  "config": {
+    "default": true,
+    "MD013": false, // line length — wiki pages are prose, not code; don't force hard wraps
+    "MD033": false  // allow inline HTML if a page ever needs it
+  },
+  "globs": ["**/*.md"],
+  "ignores": ["node_modules/**", "raw/**"]
+}
