@@ -18,6 +18,17 @@ that principle, treat it as a defect to be flagged, not a license to sideline th
 
 These are standing rules. They are not conditional on launch, project phase, or workload.
 
+- **The feature workflow (`/feature-discuss`, `/feature-plan`, `/feature-execute`,
+  `/feature-quick`, etc.) governs building this project's own infrastructure and
+  components — the kind of work Feature #1 was (scaffolding the wiki structure and this
+  schema itself). It does not govern the second brain's ongoing knowledge operations.**
+  Ingestion, query, lint, and reconciliation — everything this file (§4–§9) describes —
+  run directly, in conversation, following this schema, with no feature ceremony wrapped
+  around them. Reading a new source into the wiki is not "adding a feature"; it is the
+  system doing its actual job. If a session finds itself reaching for `/feature-quick` to
+  wrap an ingestion or lint pass, that is a misapplication of the workflow, not a
+  reasonable default — stop and run the operation directly per this schema instead.
+
 - **No automation on a timer — ever.** Nothing in this system runs on a schedule.
   Ingestion, linting, and reconciliation are all manually triggered, permanently. This is
   not a not-yet-automated state that will change once things are stable; it is the design.
@@ -79,6 +90,13 @@ Field notes:
 citation (`source`) that bottoms out outside the wiki. A page missing either is invalid
 and must be fixed or removed, not shipped.
 
+**One explicit exemption:** knowledge-testing companion files (one per topic, living in
+`wiki/shared/` next to that topic's own page — see the `interrogate-me` skill's
+`references/knowledge-testing.md`) are diagnostic content about Alfonso's own grasp of a
+topic, not a claim about the world, and are exempt from the `confidence`/`source`
+requirement above by design. A lint pass enforcing this minimum bar (§6.2) must recognize
+this exemption rather than flagging these files as invalid.
+
 ---
 
 ## 3. Page structure rules
@@ -110,10 +128,23 @@ page, and the existing side is simply unpaired (`paired_with` omitted).
 
 The failure mode this avoids is **low-information stub files diluting the index** — pages
 that exist only to complete a symmetry, carrying no real content, that a reader (human or
-Claude) still has to open, evaluate, and dismiss. This is the exact documented failure
-mode of the closest analogous pattern, Zettelkasten's literature-notes vs.
-permanent-notes distinction: mechanically minting an empty counterpart note degrades the
-whole index's signal. We do not repeat it here.
+Claude) still has to open, evaluate, and dismiss. This is this project's own reasoning, not
+a rule borrowed from established doctrine — it is only loosely analogous to Zettelkasten's
+literature-notes vs. permanent-notes distinction (that community's actual documented
+tension is narrower: *when* a literature note should graduate into a permanent note, not
+whether to mechanically mint an empty counterpart for symmetry). See
+`wiki/claude-knowledge/zettelkasten-atomic-notes.md` for the full correction and its
+sourcing. The rule stands on its own merits regardless.
+
+**A pairing must be visible as a real link, not just a frontmatter field.** Whenever a page
+sets `paired_with`, it must also contain an actual inline relative markdown link (§3.3) to
+its counterpart somewhere in the page body — not rely on the `paired_with` field alone.
+This was added after Obsidian was adopted as a browsing layer for this wiki: Obsidian's
+graph view and backlinks only render actual links, not arbitrary YAML frontmatter fields,
+so a pairing that exists only in `paired_with` is invisible when actually browsing the
+wiki, even though `CLAUDE-WIKI.md` treats it as a meaningful, earned relationship. The
+frontmatter field remains required (it's what the lint pass's citation/pairing checks
+read), but it is no longer sufficient on its own.
 
 ### 3.3 Links — relative markdown only, no wikilinks
 
@@ -342,7 +373,10 @@ what the wiki already holds — updating, correcting, or overturning existing pa
 | File an ad-hoc answer into the wiki | Yes | |
 | Reconciliation update | Yes | High-stakes → independent subagents (§8, §9) |
 | Conversational disagreement / pushback | **Never gated** | Fires immediately (§7.2) |
+| `ABOUT-ME.md` growth (via `interrogate-me`) | **No** | Structurally outside the wiki, never covered by §7 to begin with; still requires `interrogate-me`'s own completeness checkpoint (show the draft, confirm it's enough) before writing — see that skill's `references/about-me.md` |
+| Knowledge-testing companion file (via `interrogate-me`) | **No** | Diagnostic content about Alfonso's own grasp of a topic, not a claim about the world — exempt from §2's minimum bar (see above); same completeness-checkpoint-then-silent-write pattern as `ABOUT-ME.md` — see `references/knowledge-testing.md` |
 
 Standing rules: no automation on a timer (§1) · automemory disabled repo-locally (§1) ·
-every page trust-tagged and externally cited (§2, §6) · index-first, never load the whole
-wiki (§5) · relative markdown links only, no wikilinks (§3.3).
+every page trust-tagged and externally cited (§2, §6, with one named exemption) ·
+index-first, never load the whole wiki (§5) · relative markdown links only, no wikilinks
+(§3.3) · every `paired_with` pairing must also be a real inline link (§3.2).

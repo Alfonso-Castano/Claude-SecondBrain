@@ -14,7 +14,11 @@ The first real session here should be an extensive, in-depth sweep, not a light 
    tends to belong in a personal-context file for a system like this one — an AI that's
    meant to function as a genuinely knowledgeable co-founder / executive assistant, not
    just a topic-indexed archive. Let that research inform which specific topics get a deep
-   pass, alongside your own reasoning from what comes up in the broad sweep.
+   pass, alongside your own reasoning from what comes up in the broad sweep. This research
+   has already been done once — read `references/about-me-topics.md` (next to this file)
+   before starting; it covers what's already known and shouldn't be re-asked from scratch,
+   the one mandatory topic, and a researched set of topic areas with reasoning. Treat it as
+   a starting brief to build on, not a rigid checklist to march through.
 3. **One topic is mandatory regardless of what the research turns up:** Alfonso's current
    business understanding and knowledge. The whole Second Brain revolves around this, so it
    gets a deep pass no matter what else the research surfaces.
