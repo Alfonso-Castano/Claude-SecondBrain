@@ -25,6 +25,12 @@ Narrower bar than the other two applications of this skill: you have enough once
 specific ambiguity is resolved, unambiguously. This isn't a broad knowledge sweep — stop
 as soon as the one point is genuinely settled, don't keep going looking for more to extract.
 
+**If it doesn't resolve** — Alfonso genuinely doesn't know, or the answer is itself
+unclear — that's a legitimate outcome, not a failure to push harder (SKILL.md step 4: "I
+don't know" is real data). Leave the page tagged `ambiguous` and say plainly that it's
+still unresolved rather than forcing a confident-sounding page out of an answer that didn't
+actually settle anything.
+
 ## Where the output goes, and whether it's gated
 
 **If this session is embedded in a deep-ingestion pass (CLAUDE-WIKI.md §4):**
@@ -37,7 +43,10 @@ a pass that already has that license. The resolved understanding becomes the pag
 `synthesized from conversation on [date]` (a valid citation form per this project's
 OVERVIEW.md) if the resolution is genuinely new information from Alfonso, or point back to
 the original ingested source if the ambiguity was really about how to read that source
-rather than new information.
+rather than new information. Plenty of resolutions are genuinely both at once (Alfonso
+clarifies the source *and* adds something it never said) — when that happens, cite both:
+the original source for what it actually established, and "synthesized from conversation
+on [date]" for what Alfonso added on top.
 
 **If this session is embedded in reconciliation (CLAUDE-WIKI.md §9):**
 Stays gated by propose-then-confirm, always — resolving the ambiguity does not itself

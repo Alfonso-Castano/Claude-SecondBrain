@@ -30,6 +30,20 @@ context.
 
 ## The core technique
 
+### 0. Before you begin: make sure you actually have consent
+
+There are two ways into a session, and they need different handling:
+
+- **The person asked for this directly** ("interrogate me about X," "grill me on X").
+  Consent is already given — go straight to step 1.
+- **You noticed an opportunity yourself** (an ambiguity worth resolving, a gap in
+  understanding worth surfacing) and nobody asked you to interrogate them. Don't start
+  assessing. Propose it first, in one message, and wait for a yes. Keep the proposal itself
+  general — name the *topic* you want to dig into, not the specific fork you're stuck
+  between or the source material verbatim. Naming specifics in the proposal anchors the
+  person's answer before step 1 even begins, which defeats the exact thing step 1 is
+  protecting against.
+
 ### 1. Assess first, reveal nothing
 
 Before you show your own read on the topic, your hypothesis, a source document, or
@@ -119,12 +133,15 @@ when it's ready to show them.
 
 ## Example
 
-Alfonso says "grill me on the negotiation book I read."
+Alfonso says "grill me on the negotiation book I read." This is direct consent (step 0) —
+start straight into the assessment.
 
-- **Assess first:** "Before I ask anything specific — in your own words, what's the core
-  approach that book argues for, and what's one idea from it you've actually used since?"
-  Not "did the book say X" — that would anchor him to a specific claim before he's answered
-  independently.
+- **Assess first, one question at a time:** "Before I get into what I know about the book
+  myself — what's the core approach it argues for, in your own words?" He answers. Only
+  then, as a separate turn: "Is there anything from it you've actually tried using since you
+  read it?" Two turns, not one bundled question — asking both at once would let him answer
+  only the easy half and skip the other. Neither question names a specific claim from the
+  book ("did it say X") — that would anchor him before he's answered independently.
 - **Free recall is a floor:** he names one technique and a rough shape of the argument.
   That's a starting point, not the ceiling — follow up by working through the book's actual
   structure ("it also covers preparation, anchoring, and walking away — what's your read on
@@ -135,6 +152,11 @@ Alfonso says "grill me on the negotiation book I read."
 - **Checkpoint:** once new answers stop adding anything, show him a synthesized draft — his
   actual understanding of the book, organized by the book's own structure, in his own words
   and examples — and ask if it's complete.
+
+A book that isn't already ingested anywhere has no dedicated `references/` file in this
+project — that's expected, not a gap to hunt for. It falls through to the closing section
+below: ask where the output should go, or just hand over the finished account in
+conversation.
 
 ## If something's not working
 
