@@ -24,10 +24,10 @@ A durable, cross-venture knowledge base that gives Alfonso a genuinely knowledge
 - Index-first query discipline: read `index.md` first, drill into only relevant pages, never load the whole wiki into context
 - Cross-venture learning by design — lessons from one venture are meant to inform another; the system tracks an evolving model of Alfonso, not a topic-indexed archive scoped to one business
 - Local git version history (already initialized), no remote backup — worktrees/branches/PRs considered sufficient
+- Obsidian as a visualization layer over the same file base — reverses the earlier deferral below once a felt need showed up (2026-07-21: wanting to browse via UI rather than VS Code folders). Vault config lives in `.obsidian/app.json` (gitignored, machine-local state); `.git/`, `.claude/`, `.agents/`, `.context/`, `node_modules/` are excluded from Obsidian's search and graph view so the graph stays focused on wiki content. No change to link syntax was needed — `CLAUDE-WIKI.md` §3.3's relative-markdown-links convention already renders correctly in Obsidian's graph view. See `.context/DECISIONS.md`.
 
 ### Explicitly Out of Scope
 
-- Obsidian or any other visualization frontend — deferred until a specific pain point around visualizing relationships actually shows up; not added ahead of a felt need
 - Any automation on a timer — ingestion, lint, and reconciliation are all manually triggered, throughout this entire project, not just at launch
 - Claude Code's built-in automemory feature — must be explicitly turned off; left on it would silently write to memory with no confirmation step, directly violating the propose-then-confirm principle the project is built around
 - Vector search / embeddings infrastructure — not needed at current or near-term scale (up to roughly hundreds of pages); index-first reading substitutes for it
@@ -43,7 +43,7 @@ A durable, cross-venture knowledge base that gives Alfonso a genuinely knowledge
 - A separate, parallel effort is building a business-knowledge curriculum and source list. Its output will get ingested through the normal process once ready, but this build does not wait on it — the architecture is content-agnostic.
 - Built using Alfonso's own `claude-workflow` tooling (installed at the user level, applies identically across this project and future venture builds): `/init-project` for this one-time setup, then the feature loop (`/feature` → `/feature-discuss` → `/feature-plan` → `/feature-execute` → `/feature-verify`, or `/feature-quick` for small well-understood work) for everything that gets built afterward.
 - **Feature #1 must be the wiki structure itself** — `raw/`, `wiki/`, `index.md`, `log.md`, and `CLAUDE-WIKI.md`'s actual content — run through the full discuss/plan/execute/verify loop, not treated as boilerplate scaffolding. It's the single most deliberated part of the whole project (paired-folder convention, tagging system, propose-then-confirm, index-first design).
-- Expected shape of future work: a deep ingestion pass on a new source is a feature likely warranting full ceremony, given the research involved; a routine lint/health-check pass is a good fit for `/feature-quick`, being small, recurring, and well-understood.
+- **Superseded 2026-07-21 (see `.context/DECISIONS.md`):** the line below originally scoped ingestion/lint passes as future `/feature`-workflow items. That is no longer correct — the feature workflow governs building this project's own infrastructure only; ingestion, query, lint, and reconciliation are the second brain's ongoing operations and run directly per `CLAUDE-WIKI.md` §4–§9, with no feature ceremony. Kept below, struck through, for historical record of the original (mistaken) assumption: ~~a deep ingestion pass on a new source is a feature likely warranting full ceremony, given the research involved; a routine lint/health-check pass is a good fit for `/feature-quick`, being small, recurring, and well-understood.~~
 
 ## Constraints
 
