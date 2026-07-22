@@ -214,10 +214,10 @@ Because that human review is waived per-page, the pass carries its own disciplin
    closing step, not something to skip when time is short. A deep-ingestion pass is not
    complete until self-verification has run.
 
-The **"grill me" interrogation skill** (a future feature, not built here) plugs into this
-workflow: it is the mechanism by which the human is actively questioned to surface source
-material and resolve `ambiguous`-tagged points before or during ingestion. Reference it as
-the interrogation dependency; do not design around its current absence.
+The **`interrogate-me` skill** (built — see `.claude/skills/interrogate-me/SKILL.md` and
+its `references/ambiguous-resolution.md`) plugs into this workflow: it is the mechanism by
+which the human is actively questioned to surface source material and resolve
+`ambiguous`-tagged points before or during ingestion.
 
 ---
 
@@ -343,9 +343,9 @@ thought-partner guidance (use a devil's advocate; use debating sub-agents) *and*
 reference material's independent sycophancy warning, with this project's own automation-bias
 research finding. Three separate lines arriving at the same structure.
 
-The **"grill me" interrogation skill** (future feature, out of scope here) plugs into the
-high-stakes path as the mechanism for interrogating the human during reconciliation. Note
-the plug point; do not build it here.
+The **`interrogate-me` skill** (built — see `.claude/skills/interrogate-me/SKILL.md` and
+its `references/ambiguous-resolution.md`) plugs into the high-stakes path as the mechanism
+for interrogating the human during reconciliation.
 
 ---
 
@@ -359,7 +359,7 @@ what the wiki already holds — updating, correcting, or overturning existing pa
 - Reconciliation that overturns existing content, changes a trust tag, or resolves a
   contradiction is **high-stakes** and uses the **independent-subagent devil's-advocate
   path** (§8).
-- The **"grill me" skill** plugs in here as well, as the interrogation front-end that
+- The **`interrogate-me` skill** plugs in here as well, as the interrogation front-end that
   surfaces and pressure-tests the human's position before a reconciliation is finalized.
 
 ---

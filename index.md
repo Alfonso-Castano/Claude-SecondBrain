@@ -21,7 +21,7 @@ Unified catalog of every page across `wiki/shared/` and `wiki/claude-knowledge/`
 - [Ingestion, Growth, and Maintenance Mechanics](wiki/shared/ingestion-growth-maintenance-mechanics.md) — `shared` — Context-vs-connections distinction, layered lookup order for queries.
 - [Real-World Second-Brain Implementations (Karpathy Pattern)](wiki/claude-knowledge/real-world-second-brain-implementations.md) — `claude-knowledge` — Comparison of public Claude-Code second-brain repos; surfaces a likely real gap in this project's schema (no ingestion-time contradiction-flagging).
 
-## Grill me / knowledge extraction
+## Interrogation & knowledge extraction (grill-me / interrogate-me)
 
 - [Grill Me — The Interrogation/Extraction Technique](wiki/shared/grill-me-technique.md) — `shared` — What it is, what it's for, and its current status in this project (the `interrogate-me` skill has landed, see the page for detail). Paired with claude-knowledge.
 - [Knowledge Elicitation — Established Interview Technique](wiki/claude-knowledge/knowledge-elicitation-interview-techniques.md) — `claude-knowledge` — The older knowledge-engineering discipline grill-me sits inside: structured vs. unstructured interviews, tacit knowledge, protocol analysis, and a concrete session-length best practice.
@@ -41,6 +41,16 @@ Unified catalog of every page across `wiki/shared/` and `wiki/claude-knowledge/`
 - [Zettelkasten and Atomic Notes — And a Correction to CLAUDE-WIKI.md](wiki/claude-knowledge/zettelkasten-atomic-notes.md) — `claude-knowledge` — Luhmann's method and atomic notes; corrects an overstated citation in `CLAUDE-WIKI.md` §3.2 about the literature-notes/permanent-notes distinction.
 - [PKM Anti-Patterns and Failure Modes](wiki/claude-knowledge/pkm-anti-patterns-and-failure-modes.md) — `claude-knowledge` — Collector's fallacy, note rot, the twelve named anti-patterns, the "second brain delusion" — and which of `CLAUDE-WIKI.md`'s mechanisms do (and don't) defend against them.
 
+## Business — offers, pricing, and value (Hormozi, $100M Offers)
+
+- [The Grand Slam Offer Framework (Hormozi)](wiki/shared/grand-slam-offer-framework.md) — `shared` — Core definition, commoditization vs. differentiation, the 22.4x money-math example, the acquisition.com business model, and Hormozi's origin story.
+- [Finding a Starving Market (Hormozi)](wiki/shared/finding-a-starving-market.md) — `shared` — The four market indicators (pain, purchasing power, targetability, growth), the Lloyd/newspapers cautionary tale, market > offer > persuasion ordering, niching down and the Dan Kennedy pricing example.
+- [Premium Pricing and the Virtuous Cycle of Price (Hormozi)](wiki/shared/premium-pricing-virtuous-cycle.md) — `shared` — Why raising price usually beats lowering it, the virtuous/vicious pricing cycle, the wine-tasting study, and the Gym Launch premium-pricing case study.
+- [The Value Equation (Hormozi)](wiki/shared/value-equation-hormozi.md) — `shared` — The four value drivers (dream outcome, likelihood of achievement, time delay, effort/sacrifice), psychological vs. logical solutions, and the meditation-vs-Xanax worked comparison.
+- [Constructing a Grand Slam Offer — The Five-Step Process (Hormozi)](wiki/shared/constructing-a-grand-slam-offer.md) — `shared` — Divergent thinking, dream outcome → problems → solutions → delivery vehicles → trim and stack, and the sales-to-fulfillment continuum.
+- [Enhancing Offers — Scarcity, Urgency, Bonuses, and Guarantees (Hormozi)](wiki/shared/enhancing-offers-scarcity-urgency-bonuses-guarantees.md) — `shared` — The delicate dance of desire, scarcity/urgency tactics, bonus-stacking rules, and the four types of guarantees.
+- [Naming Offers — The MAGIC Formula (Hormozi)](wiki/shared/naming-offers-magic-formula.md) — `shared` — The Magnetic-reason/Avatar/Goal/Interval/Container naming formula and the offer-fatigue escalation sequence.
+
 ---
 
-*Last updated: 2026-07-21, first deep-ingestion pass (second-brain pattern knowledge).*
+*Last updated: 2026-07-22, second deep-ingestion pass (Hormozi $100M Offers business/pricing knowledge).*
