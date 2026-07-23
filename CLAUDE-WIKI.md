@@ -114,17 +114,52 @@ named concept, a new project: these earn a page. A new fact about something that
 has a page does **not**; it belongs on the existing page. Creating a page is not the
 reflex for every new fact — editing is.
 
-### 3.2 `shared` / `claude-knowledge` pairing — earned, not mechanical
+### 3.2 `shared` / `claude-knowledge` — defined by verified mastery, not by who supplied the file
 
-The two folders can pair: a `shared` page (facts the human handed over) can have a
-`claude-knowledge` counterpart (what Claude independently researched or concluded about
-the same topic), linked via `paired_with`.
+**`shared`** holds what Alfonso himself actually, verifiably knows or understands.
+**`claude-knowledge`** holds everything else Claude knows — its own independent research,
+and anything extracted from third-party source material before Alfonso's own grasp of it
+has been verified.
+
+This is **not** a provenance split ("who handed over the raw file"). Handing Claude a book,
+article, or transcript to ingest is an instruction to process that source — it is not, by
+itself, evidence that Alfonso already knows what's in it. He has been explicit that he will
+increasingly hand over sources he hasn't read or absorbed at all, precisely because part of
+what he wants from this system is Claude getting smart on his behalf. A page earns `shared`
+by clearing one bar: **would Claude, right now, be genuinely confident this is something
+Alfonso actually holds — not just something extracted from a document he happened to
+supply?** That confidence can come from any channel: an `interrogate-me` session, something
+he stated plainly in ordinary conversation, a concept he applied correctly to a real
+decision — the channel doesn't matter, only whether it clears the bar. When it's unclear
+whether the bar is cleared, default to **not** clearing it — assume Alfonso knows less than
+he might, not more. He has stated this directly: redundant information he already has costs
+him little; a page that silently assumes understanding he doesn't have costs him a real gap
+he won't know to check.
+
+**One standing exception:** Alfonso's own directly-authored material — his own raw notes,
+his own statements in conversation — is `shared` immediately, with no verification step.
+When he is the one saying or writing something, that is already something he knows by
+definition; the verification bar exists for *someone else's* material passing through
+Claude, not for Alfonso's own words.
+
+**Practical default for ingestion (see §4):** a deep-ingestion pass over third-party source
+material lands its pages in `claude-knowledge` by default. A page only moves to (or gains a
+counterpart in) `shared` once Alfonso's grasp of that specific content has actually been
+verified — most commonly via a follow-on `interrogate-me` session, but not exclusively. This
+default can produce a partial split within a single source: if Alfonso demonstrates strong
+retention of one part of a book but not another, only the retained part earns a `shared`
+page (or companion), and the rest stays `claude-knowledge`-only. The two pages need not say
+the same thing at the same depth — the `shared` version reflects what Alfonso actually
+holds, in his own framing where that differs from the fuller version, and can legitimately
+be thinner than its `claude-knowledge` counterpart.
 
 **A pairing is earned, never mechanical.** Never create a stub on the other side of a
 pairing just to satisfy the convention. A `claude-knowledge` page exists only when Claude
-actually has independent knowledge worth recording; a `shared` page exists only when the
-human actually provided content. If one side has nothing substantive to say, it has no
-page, and the existing side is simply unpaired (`paired_with` omitted).
+actually has independent knowledge worth recording; a `shared` page exists only when
+Alfonso's own grasp of that specific content has actually been verified (§3.2 above) — not
+merely because a counterpart happens to exist on the other side. If one side has nothing
+substantive to say, it has no page, and the existing side is simply unpaired (`paired_with`
+omitted).
 
 The failure mode this avoids is **low-information stub files diluting the index** — pages
 that exist only to complete a symmetry, carrying no real content, that a reader (human or
@@ -188,6 +223,15 @@ Because that human review is waived per-page, the pass carries its own disciplin
    only for genuinely distinct entities.
 2. **Write each page** with complete, valid frontmatter (§2), including an honest trust
    tag and a `source` citation that points back to the ingested material.
+
+   **Default landing folder is `claude-knowledge`, not `shared`** (§3.2). Ingesting a
+   third-party source — a book, article, transcript, or course someone else authored — is
+   not evidence that Alfonso already knows what's in it, even though he's the one who
+   supplied the file. Pages land in `claude-knowledge` by default and only move to (or gain
+   a companion in) `shared` once his own grasp of that specific content is actually
+   verified, typically via a later `interrogate-me` pass. The one exception is Alfonso's own
+   directly-authored material (his own raw notes, his own conversational statements), which
+   is `shared` immediately since he is its author.
 
    **Preserve depth — do not compress for brevity.** Alfonso has stated this directly and
    repeatedly: he wants a source's actual reasoning, nuance, caveats, and concrete examples
@@ -388,7 +432,7 @@ topic — the same edit-over-new-page discipline as §3.1, applied to this file 
 
 Where a folded-in sentence draws on a specific ingested wiki source, add a real inline
 relative markdown link at that point in the prose (same link discipline as §3.3) — e.g. "his
-grasp of *$100M Offers* ([grand-slam-offer-framework.md](wiki/shared/grand-slam-offer-framework.md))
+grasp of *$100M Offers* ([grand-slam-offer-framework.md](wiki/claude-knowledge/grand-slam-offer-framework.md))
 is solid." This preserves traceability without a separate per-topic summary: any claim in
 the file can be traced back to the wiki page it came from, and — since fabrication and
 sycophancy are the two things named as breaking Alfonso's trust — traceability here is not

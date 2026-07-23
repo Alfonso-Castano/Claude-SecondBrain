@@ -10,7 +10,7 @@ Unified catalog of every page across `wiki/shared/` and `wiki/claude-knowledge/`
 
 - [What a Second Brain Is](wiki/shared/second-brain-definition.md) — `shared` — Definition, the ephemeral-chat problem it solves, and the retrieval-first design mindset. Paired with claude-knowledge.
 - [Second Brain — Landscape, Etymology, and Adjacent Paradigms](wiki/claude-knowledge/second-brain-definition.md) — `claude-knowledge` — Where "second brain" as a term comes from (Tiago Forte), and the digital-garden-vs-second-brain distinction (public vs. private).
-- [The Four C's — Second Brain vs. AI Operating System](wiki/shared/four-c-model.md) — `shared` — Context/Connections/Capabilities/Cadence, in strict build order; why this project currently stops after the first two.
+- [The Four C's — Second Brain vs. AI Operating System](wiki/claude-knowledge/four-c-model.md) — `claude-knowledge` — Context/Connections/Capabilities/Cadence, in strict build order; why this project currently stops after the first two. Reclassified from `shared` — no demonstrated engagement with this specific framework found on review (§3.2's mastery bar).
 - [The Five Levels of Second Brain Maturity](wiki/shared/five-levels-of-second-brain-maturity.md) — `shared` — The full maturity ladder (exact-match router → LLM wiki → semantic search → knowledge graph → autonomous brain OS), diagnostic heuristics, and where this project sits (Level 2). Paired with claude-knowledge.
 - [Context Rot — What the Research Actually Shows](wiki/claude-knowledge/context-rot-research.md) — `claude-knowledge` — Chroma's 2025 research study grounding the Level 5 "more context can hurt" concern with real data; includes a caveat to the "index-first retrieval makes more-is-better safe" claim.
 
@@ -43,14 +43,20 @@ Unified catalog of every page across `wiki/shared/` and `wiki/claude-knowledge/`
 
 ## Business — offers, pricing, and value (Hormozi, $100M Offers)
 
-- [The Grand Slam Offer Framework (Hormozi)](wiki/shared/grand-slam-offer-framework.md) — `shared` — Core definition, commoditization vs. differentiation, the 22.4x money-math example, the acquisition.com business model, and Hormozi's origin story.
-- [Finding a Starving Market (Hormozi)](wiki/shared/finding-a-starving-market.md) — `shared` — The four market indicators (pain, purchasing power, targetability, growth), the Lloyd/newspapers cautionary tale, market > offer > persuasion ordering, niching down and the Dan Kennedy pricing example.
-- [Premium Pricing and the Virtuous Cycle of Price (Hormozi)](wiki/shared/premium-pricing-virtuous-cycle.md) — `shared` — Why raising price usually beats lowering it, the virtuous/vicious pricing cycle, the wine-tasting study, and the Gym Launch premium-pricing case study.
-- [The Value Equation (Hormozi)](wiki/shared/value-equation-hormozi.md) — `shared` — The four value drivers (dream outcome, likelihood of achievement, time delay, effort/sacrifice), psychological vs. logical solutions, and the meditation-vs-Xanax worked comparison.
-- [Constructing a Grand Slam Offer — The Five-Step Process (Hormozi)](wiki/shared/constructing-a-grand-slam-offer.md) — `shared` — Divergent thinking, dream outcome → problems → solutions → delivery vehicles → trim and stack, and the sales-to-fulfillment continuum.
-- [Enhancing Offers — Scarcity, Urgency, Bonuses, and Guarantees (Hormozi)](wiki/shared/enhancing-offers-scarcity-urgency-bonuses-guarantees.md) — `shared` — The delicate dance of desire, scarcity/urgency tactics, bonus-stacking rules, and the four types of guarantees.
-- [Naming Offers — The MAGIC Formula (Hormozi)](wiki/shared/naming-offers-magic-formula.md) — `shared` — The Magnetic-reason/Avatar/Goal/Interval/Container naming formula and the offer-fatigue escalation sequence.
+All seven pages below were reclassified from `shared` to `claude-knowledge` on 2026-07-23
+per `CLAUDE-WIKI.md` §3.2's redefinition (verified mastery, not provenance of the source
+file) — no `interrogate-me` pass has run against this ingestion yet, so no page here has
+Alfonso's grasp actually verified. Expect these to move back to (or gain a `shared`
+companion in) `shared` once that interrogation happens, per §3.2's promotion path.
+
+- [The Grand Slam Offer Framework (Hormozi)](wiki/claude-knowledge/grand-slam-offer-framework.md) — `claude-knowledge` — Core definition, commoditization vs. differentiation, the 22.4x money-math example, the acquisition.com business model, and Hormozi's origin story.
+- [Finding a Starving Market (Hormozi)](wiki/claude-knowledge/finding-a-starving-market.md) — `claude-knowledge` — The four market indicators (pain, purchasing power, targetability, growth), the Lloyd/newspapers cautionary tale, market > offer > persuasion ordering, niching down and the Dan Kennedy pricing example.
+- [Premium Pricing and the Virtuous Cycle of Price (Hormozi)](wiki/claude-knowledge/premium-pricing-virtuous-cycle.md) — `claude-knowledge` — Why raising price usually beats lowering it, the virtuous/vicious pricing cycle, the wine-tasting study, and the Gym Launch premium-pricing case study.
+- [The Value Equation (Hormozi)](wiki/claude-knowledge/value-equation-hormozi.md) — `claude-knowledge` — The four value drivers (dream outcome, likelihood of achievement, time delay, effort/sacrifice), psychological vs. logical solutions, and the meditation-vs-Xanax worked comparison.
+- [Constructing a Grand Slam Offer — The Five-Step Process (Hormozi)](wiki/claude-knowledge/constructing-a-grand-slam-offer.md) — `claude-knowledge` — Divergent thinking, dream outcome → problems → solutions → delivery vehicles → trim and stack, and the sales-to-fulfillment continuum.
+- [Enhancing Offers — Scarcity, Urgency, Bonuses, and Guarantees (Hormozi)](wiki/claude-knowledge/enhancing-offers-scarcity-urgency-bonuses-guarantees.md) — `claude-knowledge` — The delicate dance of desire, scarcity/urgency tactics, bonus-stacking rules, and the four types of guarantees.
+- [Naming Offers — The MAGIC Formula (Hormozi)](wiki/claude-knowledge/naming-offers-magic-formula.md) — `claude-knowledge` — The Magnetic-reason/Avatar/Goal/Interval/Container naming formula and the offer-fatigue escalation sequence.
 
 ---
 
-*Last updated: 2026-07-22, second deep-ingestion pass (Hormozi $100M Offers business/pricing knowledge).*
+*Last updated: 2026-07-23, reclassification of Hormozi and Four C's pages from `shared` to `claude-knowledge` per `CLAUDE-WIKI.md` §3.2's redefinition.*

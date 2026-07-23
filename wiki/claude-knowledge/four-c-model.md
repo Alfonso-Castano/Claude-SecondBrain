@@ -1,6 +1,6 @@
 ---
 title: The Four C's — Second Brain vs. AI Operating System
-folder: shared
+folder: claude-knowledge
 tags: [second-brain, four-cs, framework, scope]
 created: 2026-07-21
 last_updated: 2026-07-21
