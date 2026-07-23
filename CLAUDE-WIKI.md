@@ -154,12 +154,18 @@ Use standard relative markdown links between pages:
 See [Topic](../claude-knowledge/topic.md) for the researched view.
 ```
 
-**Never use `[[wikilink]]` syntax.** There is no resolver for it in this project: a
-visualization frontend (e.g. Obsidian) is deliberately deferred, so `[[…]]` links would
-resolve to nothing and silently break navigation and link-checking. This has to be stated
-explicitly because wikilink syntax is a plausible default carried in from general PKM
-training data — it is the kind of thing a session might reach for by habit. Do not. Only
-relative markdown links are valid here, and only they are checked by the lint pass.
+**Never use `[[wikilink]]` syntax, even now that Obsidian is installed as a browsing
+layer.** This was originally decided while Obsidian was still deferred, and was
+re-verified after Obsidian's adoption rather than carried over by default — the rejection
+still holds, on narrower, now-explicit grounds: `[[…]]` renders as broken, unresolved text
+in every context that reads these files *without* Obsidian (VS Code, GitHub, Claude's own
+Read tool), and `markdown-link-check` (§6.1) cannot resolve or validate it, so link-checking
+would silently stop covering wiki links. Obsidian itself does not need `[[…]]` — its graph
+view, backlinks, and rename-tracking all work identically on standard relative markdown
+links, so nothing is gained by switching. This has to be stated explicitly because wikilink
+syntax is a plausible default carried in from general PKM training data — it is the kind of
+thing a session might reach for by habit, especially now that Obsidian is present. Do not.
+Only relative markdown links are valid here, and only they are checked by the lint pass.
 
 ---
 
@@ -364,6 +370,93 @@ what the wiki already holds — updating, correcting, or overturning existing pa
 
 ---
 
+## 10. `ABOUT-ME.md` — growth, size, and update mechanics
+
+`ABOUT-ME.md` is structurally outside the wiki (§2's exemption already covers its
+frontmatter-free status), but it is loaded into **every** session unconditionally via
+`CLAUDE.md`'s `@ABOUT-ME.md` import — no other file in this project is read that
+unconditionally. That makes it a sensitive, high-leverage file: small errors or bloat there
+tax every single session, not just the ones that need them. It gets its own rules for that
+reason.
+
+### 10.1 Fold-in by default, with inline pointers for traceability
+
+Default to **editing within an existing section** (e.g. "Business understanding," "Values
+and self-identified blind spots") rather than appending a new heading or summary block per
+topic — the same edit-over-new-page discipline as §3.1, applied to this file specifically.
+`ABOUT-ME.md` should read as a living synthesis, not a log of topics learned.
+
+Where a folded-in sentence draws on a specific ingested wiki source, add a real inline
+relative markdown link at that point in the prose (same link discipline as §3.3) — e.g. "his
+grasp of *$100M Offers* ([grand-slam-offer-framework.md](wiki/shared/grand-slam-offer-framework.md))
+is solid." This preserves traceability without a separate per-topic summary: any claim in
+the file can be traced back to the wiki page it came from, and — since fabrication and
+sycophancy are the two things named as breaking Alfonso's trust — traceability here is not
+optional polish.
+
+A genuinely new top-level section (nothing existing fits) is a structural change, not a
+routine edit — always show the proposed change and confirm before writing, regardless of
+which trigger in §10.3 produced it.
+
+### 10.2 Size and relevance-density guideline
+
+Tentative trigger: **~4k tokens / ~500–600 lines**, mirroring `index.md`'s own proven
+size trigger (§6.2) rather than inventing a new mechanism.
+
+The trigger is a checkpoint, not a ceiling — growth is expected and correct as the second
+brain learns more about Alfonso. What the checkpoint forces is a review against the real
+governing test: **is every section still relevant to nearly every session?** This follows
+directly from `wiki/claude-knowledge/context-rot-research.md` — degradation tracks the
+*ratio* of relevant-to-irrelevant content in context, not raw token count. Content that's
+only sometimes relevant (deep, topic-specific detail) belongs in a wiki page reached by an
+inline pointer (§10.1), not inline in the always-loaded file.
+
+Crossing the trigger means condensing the section(s) that grew, in place — not a blanket
+rewrite of the whole file, and not a reflexive split into per-topic files (already rejected
+in favor of fold-in, see §10.1).
+
+### 10.3 Update triggers — event-based, never a timer
+
+Consistent with §1's standing rule that nothing in this system runs on a schedule, all
+`ABOUT-ME.md` updates are triggered by a specific event, never by elapsed time. Two events
+are Claude-initiated:
+
+- **Post-ingestion-interrogation.** When an `interrogate-me` session was itself triggered by
+  a source ingestion, its close doubles as an `ABOUT-ME.md` update opportunity. Ask Alfonso
+  to rate the topic's importance 1–10; that score throttles how much changes (§10.4).
+- **End-of-discussion.** At the natural close of a substantive venture or business
+  discussion, ask Alfonso whether anything from it is worth folding into `ABOUT-ME.md`. This
+  is a prompt, not a judgment Claude makes unilaterally — Alfonso decides what was actually
+  worth capturing, consistent with his standing instruction that ambiguous/strategic
+  judgment calls stay his.
+
+**Explicitly not Claude-initiated:** venture/life-state changes (e.g. hitting a revenue
+milestone, a schedule change) and drift/staleness (something already in the file going out
+of date). Alfonso notices these himself and triggers an update explicitly when he does —
+including a roughly-quarterly manual review pass he intends to run on his own initiative.
+Do not attempt to auto-detect either of these; they are named manual triggers, not gaps to
+be automated away.
+
+### 10.4 Deciding what and how much to write
+
+Use the joint importance score (§10.3) as the actual throttle on edit size, not a formality:
+
+- **Low score** — no edit, or at most one clause added to an existing sentence.
+- **High score** — a real rewrite of the relevant existing section, folded in per §10.1.
+
+A long interrogation transcript about a minor topic should not produce a bigger edit than a
+short but important one — the score governs size, not the raw volume of source material.
+
+### 10.5 Audit trail
+
+Every `ABOUT-ME.md` write — regardless of which trigger produced it — gets its own `log.md`
+entry using a new `about-me` operation type (alongside `ingest`/`lint`/`reconcile`/`file`).
+This closes a real gap: `ABOUT-ME.md` carries no frontmatter or timestamp of its own, so
+without a log entry there is no way to later detect "an interrogation happened but
+`ABOUT-ME.md` was never updated afterward." The log entry is that record.
+
+---
+
 ## Quick reference
 
 | Action | Gated by confirm? | Notes |
@@ -373,10 +466,12 @@ what the wiki already holds — updating, correcting, or overturning existing pa
 | File an ad-hoc answer into the wiki | Yes | |
 | Reconciliation update | Yes | High-stakes → independent subagents (§8, §9) |
 | Conversational disagreement / pushback | **Never gated** | Fires immediately (§7.2) |
-| `ABOUT-ME.md` growth (via `interrogate-me`) | **No** | Structurally outside the wiki, never covered by §7 to begin with; still requires `interrogate-me`'s own completeness checkpoint (show the draft, confirm it's enough) before writing — see that skill's `references/about-me.md` |
+| `ABOUT-ME.md` growth (any trigger) | **No** (still shown for confirmation) | Structurally outside the wiki, never covered by §7 to begin with; every write is still shown as a draft and confirmed before it lands — via `interrogate-me`'s own completeness checkpoint (`references/about-me.md`) when the trigger is interrogation, or directly per §10 for the other triggers. Fold-in-with-pointers, size trigger, and event triggers are all §10. Logged under the `about-me` operation type (§10.5) |
 | Knowledge-testing companion file (via `interrogate-me`) | **No** | Diagnostic content about Alfonso's own grasp of a topic, not a claim about the world — exempt from §2's minimum bar (see above); same completeness-checkpoint-then-silent-write pattern as `ABOUT-ME.md` — see `references/knowledge-testing.md` |
 
 Standing rules: no automation on a timer (§1) · automemory disabled repo-locally (§1) ·
 every page trust-tagged and externally cited (§2, §6, with one named exemption) ·
 index-first, never load the whole wiki (§5) · relative markdown links only, no wikilinks
-(§3.3) · every `paired_with` pairing must also be a real inline link (§3.2).
+(§3.3) · every `paired_with` pairing must also be a real inline link (§3.2) ·
+`ABOUT-ME.md` grows by fold-in with inline pointers, gated by a size/relevance-density
+checkpoint, and only on named events, never a timer (§10).
