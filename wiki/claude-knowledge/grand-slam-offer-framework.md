@@ -6,7 +6,10 @@ created: 2026-07-22
 last_updated: 2026-07-22
 source: raw/2026-07-22-100m-offers-hormozi-audiobook-transcript.md
 confidence: extracted
+paired_with: ../shared/grand-slam-offer-framework.md
 ---
+
+*Paired with [Alfonso's verified understanding](../shared/grand-slam-offer-framework.md) — as of the 2026-07-24 interrogation, he holds the core tagline and the price-vs-value distinction, but not the "category of one" comparison mechanism.*
 
 ## What this is
 

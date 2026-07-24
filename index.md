@@ -43,19 +43,28 @@ Unified catalog of every page across `wiki/shared/` and `wiki/claude-knowledge/`
 
 ## Business — offers, pricing, and value (Hormozi, $100M Offers)
 
-All seven pages below were reclassified from `shared` to `claude-knowledge` on 2026-07-23
-per `CLAUDE-WIKI.md` §3.2's redefinition (verified mastery, not provenance of the source
-file) — no `interrogate-me` pass has run against this ingestion yet, so no page here has
-Alfonso's grasp actually verified. Expect these to move back to (or gain a `shared`
-companion in) `shared` once that interrogation happens, per §3.2's promotion path.
+The seven `claude-knowledge` pages below were reclassified from `shared` on 2026-07-23 per
+`CLAUDE-WIKI.md` §3.2 (verified mastery, not provenance). An `interrogate-me` pass on
+2026-07-24 then verified Alfonso's own grasp of five of the seven sub-topics (thinner,
+partial versions in his own framing — see each `shared` page for exactly what's verified
+vs. still a gap), producing `shared` companions for those five. Two — the offer-construction
+process and the naming formula — stayed `claude-knowledge`-only; his grasp of those wasn't
+verified this pass. See the [knowledge check](wiki/shared/100m-offers-knowledge-check.md)
+for the full per-sub-topic breakdown of what's solid vs. shaky.
 
+- [The Grand Slam Offer Framework — Alfonso's Understanding](wiki/shared/grand-slam-offer-framework.md) — `shared` — Core tagline and price-vs-value distinction, verified; the "category of one" mechanism, not yet. Paired with claude-knowledge.
 - [The Grand Slam Offer Framework (Hormozi)](wiki/claude-knowledge/grand-slam-offer-framework.md) — `claude-knowledge` — Core definition, commoditization vs. differentiation, the 22.4x money-math example, the acquisition.com business model, and Hormozi's origin story.
+- [Finding a Starving Market — Alfonso's Understanding](wiki/shared/finding-a-starving-market.md) — `shared` — Thin: niching-down is solid, the four-indicator framework is not. Paired with claude-knowledge.
 - [Finding a Starving Market (Hormozi)](wiki/claude-knowledge/finding-a-starving-market.md) — `claude-knowledge` — The four market indicators (pain, purchasing power, targetability, growth), the Lloyd/newspapers cautionary tale, market > offer > persuasion ordering, niching down and the Dan Kennedy pricing example.
+- [Premium Pricing and the Virtuous Cycle of Price — Alfonso's Understanding](wiki/shared/premium-pricing-virtuous-cycle.md) — `shared` — The causal mechanism, reconstructed via his own reasoning; terminology and case study not yet verified. Paired with claude-knowledge.
 - [Premium Pricing and the Virtuous Cycle of Price (Hormozi)](wiki/claude-knowledge/premium-pricing-virtuous-cycle.md) — `claude-knowledge` — Why raising price usually beats lowering it, the virtuous/vicious pricing cycle, the wine-tasting study, and the Gym Launch premium-pricing case study.
+- [The Value Equation — Alfonso's Understanding](wiki/shared/value-equation-hormozi.md) — `shared` — Weak unprompted recall, strong applied use of 3 of 4 drivers on a novel case. Paired with claude-knowledge.
 - [The Value Equation (Hormozi)](wiki/claude-knowledge/value-equation-hormozi.md) — `claude-knowledge` — The four value drivers (dream outcome, likelihood of achievement, time delay, effort/sacrifice), psychological vs. logical solutions, and the meditation-vs-Xanax worked comparison.
-- [Constructing a Grand Slam Offer — The Five-Step Process (Hormozi)](wiki/claude-knowledge/constructing-a-grand-slam-offer.md) — `claude-knowledge` — Divergent thinking, dream outcome → problems → solutions → delivery vehicles → trim and stack, and the sales-to-fulfillment continuum.
+- [Constructing a Grand Slam Offer — The Five-Step Process (Hormozi)](wiki/claude-knowledge/constructing-a-grand-slam-offer.md) — `claude-knowledge` — Divergent thinking, dream outcome → problems → solutions → delivery vehicles → trim and stack, and the sales-to-fulfillment continuum. No `shared` companion — weakest sub-topic in the 2026-07-24 interrogation.
+- [Enhancing Offers — Scarcity, Urgency, Bonuses, and Guarantees — Alfonso's Understanding](wiki/shared/enhancing-offers-scarcity-urgency-bonuses-guarantees.md) — `shared` — His strongest chapter — guarantees, scarcity/urgency, and bonuses all solid, with named specific gaps. Paired with claude-knowledge.
 - [Enhancing Offers — Scarcity, Urgency, Bonuses, and Guarantees (Hormozi)](wiki/claude-knowledge/enhancing-offers-scarcity-urgency-bonuses-guarantees.md) — `claude-knowledge` — The delicate dance of desire, scarcity/urgency tactics, bonus-stacking rules, and the four types of guarantees.
-- [Naming Offers — The MAGIC Formula (Hormozi)](wiki/claude-knowledge/naming-offers-magic-formula.md) — `claude-knowledge` — The Magnetic-reason/Avatar/Goal/Interval/Container naming formula and the offer-fatigue escalation sequence.
+- [Naming Offers — The MAGIC Formula (Hormozi)](wiki/claude-knowledge/naming-offers-magic-formula.md) — `claude-knowledge` — The Magnetic-reason/Avatar/Goal/Interval/Container naming formula and the offer-fatigue escalation sequence. No `shared` companion — near-total gap in the 2026-07-24 interrogation.
+- [Knowledge Check — $100M Offers](wiki/shared/100m-offers-knowledge-check.md) — `shared` — Per-sub-topic diagnostic of Alfonso's actual grasp of the whole book; exempt from the trust-tag/citation requirement (diagnostic, not a claim about the world).
 
 ---
 

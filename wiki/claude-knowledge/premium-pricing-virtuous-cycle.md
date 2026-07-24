@@ -6,7 +6,10 @@ created: 2026-07-22
 last_updated: 2026-07-22
 source: raw/2026-07-22-100m-offers-hormozi-audiobook-transcript.md
 confidence: extracted
+paired_with: ../shared/premium-pricing-virtuous-cycle.md
 ---
+
+*Paired with [Alfonso's verified understanding](../shared/premium-pricing-virtuous-cycle.md) — as of the 2026-07-24 interrogation, he holds the causal mechanism in both directions (reasoned, not recalled), but not the terminology, the wine study, or the Gym Launch case study.*
 
 ## Framing: "grow or die"
 

@@ -6,7 +6,10 @@ created: 2026-07-22
 last_updated: 2026-07-22
 source: raw/2026-07-22-100m-offers-hormozi-audiobook-transcript.md
 confidence: extracted
+paired_with: ../shared/value-equation-hormozi.md
 ---
+
+*Paired with [Alfonso's verified understanding](../shared/value-equation-hormozi.md) — as of the 2026-07-24 interrogation, unprompted recall of the four drivers was weak, but applied use of three of the four (to a novel case) was strong.*
 
 ## The equation
 

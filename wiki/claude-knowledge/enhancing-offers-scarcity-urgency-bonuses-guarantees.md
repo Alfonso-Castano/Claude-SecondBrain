@@ -6,7 +6,10 @@ created: 2026-07-22
 last_updated: 2026-07-22
 source: raw/2026-07-22-100m-offers-hormozi-audiobook-transcript.md
 confidence: extracted
+paired_with: ../shared/enhancing-offers-scarcity-urgency-bonuses-guarantees.md
 ---
+
+*Paired with [Alfonso's verified understanding](../shared/enhancing-offers-scarcity-urgency-bonuses-guarantees.md) — as of the 2026-07-24 interrogation, this was his strongest chapter: solid on guarantees, scarcity/urgency mechanics, and bonuses, with specific gaps on anti-guarantees, performance guarantees, and the referral-commission bonus tactic.*
 
 ## Framing: the delicate dance of desire
 

@@ -6,7 +6,10 @@ created: 2026-07-22
 last_updated: 2026-07-22
 source: raw/2026-07-22-100m-offers-hormozi-audiobook-transcript.md
 confidence: extracted
+paired_with: ../shared/finding-a-starving-market.md
 ---
+
+*Paired with [Alfonso's verified understanding](../shared/finding-a-starving-market.md) — as of the 2026-07-24 interrogation, only niching-down is confirmed as actually held; the rest of this page is not yet verified.*
 
 ## The starving crowd concept
 
