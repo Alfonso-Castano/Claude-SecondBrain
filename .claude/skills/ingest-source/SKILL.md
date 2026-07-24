@@ -93,7 +93,10 @@ this skill is itself the instruction to write, per §4.
 
 ## After ingestion finishes
 
-Mention to the user that an `interrogate-me` pass on this source is a natural next step, if
-one hasn't already been discussed — that's what would let any of the freshly-ingested
-`claude-knowledge` pages earn a `shared` counterpart. Don't run it automatically as part of
-this skill unless told to; offering it is enough.
+Immediately after self-verification, offer an `interrogate-me` pass on this source — this
+is what would let any of the freshly-ingested `claude-knowledge` pages earn a `shared`
+counterpart. Read **`references/interrogation-handoff.md`** and follow it exactly: how to
+phrase the one-line offer, when to continue in the current session versus hand off to a
+fresh chat, and the standardized handoff prompt to use if a fresh chat is warranted. Don't
+run the interrogation automatically — the offer requires a yes, per `interrogate-me`'s own
+consent rule.
